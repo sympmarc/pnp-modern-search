@@ -12,7 +12,7 @@
         <link rel="canonical" href="http://127.0.0.1:8000/v3/search-parts/search-results/">
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.4">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-7.2.4">
     
     
       
@@ -756,6 +756,42 @@
   
 
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../extensibility/adaptivecards_customizations/" class="md-nav__link">
+        Custom event handlers for adaptive cards actions
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../extensibility/custom_data_sources/" class="md-nav__link">
+        Custom data sources
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../extensibility/custom_query_modifications/" class="md-nav__link">
+        Custom query modifier
+      </a>
+    </li>
+  
+
+          
         </ul>
       </nav>
     </li>
@@ -1021,7 +1057,7 @@
 <tbody>
 <tr>
 <td>Query template</td>
-<td Site="Site">The search query template in KQL format. You can use search variables here (like Path:</td>
+<td>The search query template in KQL format. You can use search variables here (like Path:{Site}).</td>
 </tr>
 <tr>
 <td>Result Source Identifier</td>
@@ -1053,7 +1089,7 @@
 </tr>
 <tr>
 <td>Selected properties</td>
-<td>The search managed properties to retrieve. You can select them from a predefined list or add them as free text if not listed. Then, these properties are available in your Handlebars template with the syntax (<code>item.property_name</code> or <code>property_name</code> inside the <code>{{#each}}</code> loop). The Web Part needs the following managed properties to get it work (<code>"Title,Path,Filename,SiteLogo,PreviewUrl,PictureThumbnailURL,ServerRedirectedPreviewURL,ServerRedirectedURL,HitHighlightedSummary,FileType,ServerRedirectedEmbedURL,ParentLink,owstaxidmetadataalltagsinfo,SPSiteUrl,SiteTitle,IsContainer,IsListItem,HtmlFileType,SiteId,WebId,UniqueID,OriginalPath,FileExtension,NormSiteID,NormListID,NormUniqueID,Created,contentclass,DefaultEncodingURL,Author,AuthorOWSUSER"</code>). <strong>It you remove them, they will be re-added automatically on the next page refresh</strong>.</td>
+<td>The search managed properties to retrieve. You can select them from a predefined list or add them as free text if not listed. Then, these properties are available in your Handlebars template with the syntax (<code>item.property_name</code> or <code>property_name</code> inside the <code>{{#each}}</code> loop). The Web Part needs the following managed properties to get it work (<code>"Title,Path,Filename,SiteLogo,PreviewUrl,PictureThumbnailURL,ServerRedirectedPreviewURL,ServerRedirectedURL,HitHighlightedSummary,FileType,ServerRedirectedEmbedURL,ParentLink,owstaxidmetadataalltagsinfo,SPSiteURL,SiteTitle,IsContainer,IsListItem,HtmlFileType,SiteId,WebId,UniqueID,OriginalPath,FileExtension,NormSiteID,NormListID,NormUniqueID,Created,contentclass,DefaultEncodingURL,Author,AuthorOWSUSER"</code>). <strong>It you remove them, they will be re-added automatically on the next page refresh</strong>.</td>
 </tr>
 <tr>
 <td>Refinement filters</td>
@@ -1152,50 +1188,50 @@
 <table>
 <thead>
 <tr>
-<th align="left"><strong>Query variable</strong></th>
-<th align="left"><strong>Definition</strong></th>
+<th style="text-align: left;"><strong>Query variable</strong></th>
+<th style="text-align: left;"><strong>Definition</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left"><strong>{Site}</strong> or <strong>{Site.URL}</strong>  <br/></td>
-<td align="left">URL of the site from where the query was issued. For example, this value can be used to query content of the managed property Path.  <br/></td>
+<td style="text-align: left;"><strong>{Site}</strong> or <strong>{Site.URL}</strong>  <br/></td>
+<td style="text-align: left;">URL of the site from where the query was issued. For example, this value can be used to query content of the managed property Path.  <br/></td>
 </tr>
 <tr>
-<td align="left"><strong>{Site.ID}</strong>  <br/></td>
-<td align="left">GUID of site from where the query was issued. This value corresponds to the value of the managed property SiteID.  <br/></td>
+<td style="text-align: left;"><strong>{Site.ID}</strong>  <br/></td>
+<td style="text-align: left;">GUID of site from where the query was issued. This value corresponds to the value of the managed property SiteID.  <br/></td>
 </tr>
 <tr>
-<td align="left"><strong>{Site.LCID}</strong>  <br/></td>
-<td align="left">Numeric value of the locale as specified by the Regional Settings in the Site Settings on the Site from where the query was issued.  <br/></td>
+<td style="text-align: left;"><strong>{Site.LCID}</strong>  <br/></td>
+<td style="text-align: left;">Numeric value of the locale as specified by the Regional Settings in the Site Settings on the Site from where the query was issued.  <br/></td>
 </tr>
 <tr>
-<td align="left"><strong>{Site.Locale}</strong>  <br/></td>
-<td align="left">Language of the Site from where the query was issued in ll-cc format — for example, en-us.  <br/></td>
+<td style="text-align: left;"><strong>{Site.Locale}</strong>  <br/></td>
+<td style="text-align: left;">Language of the Site from where the query was issued in ll-cc format — for example, en-us.  <br/></td>
 </tr>
 <tr>
-<td align="left"><strong>{Site.&lt;property&gt;}</strong>  <br/></td>
-<td align="left">Any property from the property bag of the site (SPWeb) from where the query was issued, including custom properties.  <br/></td>
+<td style="text-align: left;"><strong>{Site.&lt;property&gt;}</strong>  <br/></td>
+<td style="text-align: left;">Any property from the property bag of the site (SPWeb) from where the query was issued, including custom properties.  <br/></td>
 </tr>
 <tr>
-<td align="left"><strong>{SiteCollection}</strong> or <strong>{SiteCollection.URL}</strong>  <br/></td>
-<td align="left">URL of site collection from where the query was issued. For example, this value can be used to query content of the managed property Path.  <br/></td>
+<td style="text-align: left;"><strong>{SiteCollection}</strong> or <strong>{SiteCollection.URL}</strong>  <br/></td>
+<td style="text-align: left;">URL of site collection from where the query was issued. For example, this value can be used to query content of the managed property Path.  <br/></td>
 </tr>
 <tr>
-<td align="left"><strong>{SiteCollection.ID}</strong>  <br/></td>
-<td align="left">GUID of site collection from where the query was issued.  <br/></td>
+<td style="text-align: left;"><strong>{SiteCollection.ID}</strong>  <br/></td>
+<td style="text-align: left;">GUID of site collection from where the query was issued.  <br/></td>
 </tr>
 <tr>
-<td align="left"><strong>{SiteCollection.LCID}</strong>  <br/></td>
-<td align="left">Numeric value of the locale as specified by the Regional Settings in the Site Settings on the Site Collection from where the query was issued.  <br/></td>
+<td style="text-align: left;"><strong>{SiteCollection.LCID}</strong>  <br/></td>
+<td style="text-align: left;">Numeric value of the locale as specified by the Regional Settings in the Site Settings on the Site Collection from where the query was issued.  <br/></td>
 </tr>
 <tr>
-<td align="left"><strong>{SiteCollection.Locale}</strong>  <br/></td>
-<td align="left">Language of the Site Collection from where the query was issued in ll-cc format — for example, en-us.  <br/></td>
+<td style="text-align: left;"><strong>{SiteCollection.Locale}</strong>  <br/></td>
+<td style="text-align: left;">Language of the Site Collection from where the query was issued in ll-cc format — for example, en-us.  <br/></td>
 </tr>
 <tr>
-<td align="left"><strong>{SiteCollection.&lt;property&gt;}</strong>  <br/></td>
-<td align="left">Any property from the property bag of the root site (SPWeb) in the site collection (SPSite) from where the query was issued, including custom properties.  <br/></td>
+<td style="text-align: left;"><strong>{SiteCollection.&lt;property&gt;}</strong>  <br/></td>
+<td style="text-align: left;">Any property from the property bag of the root site (SPWeb) in the site collection (SPSite) from where the query was issued, including custom properties.  <br/></td>
 </tr>
 </tbody>
 </table>
@@ -1203,18 +1239,18 @@
 <table>
 <thead>
 <tr>
-<th align="left"><strong>Query variable</strong></th>
-<th align="left"><strong>Definition</strong></th>
+<th style="text-align: left;"><strong>Query variable</strong></th>
+<th style="text-align: left;"><strong>Definition</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left"><strong>{URLToken.&lt;integer&gt;}</strong>  <br/></td>
-<td URLToken.1="URLToken.1" align="left">A value from the URL of a page. The integer represents the position of the value in the URL as counted from right to left. For example, for the page http://www.contoso/audio/mp3/1010101, the query variable </td>
+<td style="text-align: left;"><strong>{URLToken.&lt;integer&gt;}</strong>  <br/></td>
+<td style="text-align: left;">A value from the URL of a page. The integer represents the position of the value in the URL as counted from right to left. For example, for the page http://www.contoso/audio/mp3/1010101, the query variable {URLToken.1} will query for the last value in the URL, 1010101. The query variable {URLToken.3} will query for the third last property in the URL, audio. You can query for values up to the ninth last position in a URL.  <br/></td>
 </tr>
 <tr>
-<td align="left"><strong>{Request.&lt;PropertyName&gt;}</strong>  <br/></td>
-<td Request.Url="Request.Url" align="left">A value from the current http request - for example, </td>
+<td style="text-align: left;"><strong>{Request.&lt;PropertyName&gt;}</strong>  <br/></td>
+<td style="text-align: left;">A value from the current http request - for example, {Request.Url}.  <br/></td>
 </tr>
 </tbody>
 </table>
@@ -1222,30 +1258,30 @@
 <table>
 <thead>
 <tr>
-<th align="left"><strong>Query variable</strong></th>
-<th align="left"><strong>Definition</strong></th>
+<th style="text-align: left;"><strong>Query variable</strong></th>
+<th style="text-align: left;"><strong>Definition</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left"><strong>{User}</strong> or <strong>{User.Name}</strong> <br/></td>
-<td align="left">Display name of the user who issued the query. For example, this value can be used to query content of the managed property Author.  <br/></td>
+<td style="text-align: left;"><strong>{User}</strong> or <strong>{User.Name}</strong> <br/></td>
+<td style="text-align: left;">Display name of the user who issued the query. For example, this value can be used to query content of the managed property Author.  <br/></td>
 </tr>
 <tr>
-<td align="left"><strong>{User.Email}</strong>  <br/></td>
-<td align="left">Email address of the user who issued the query. For example, this value can be used to query content of the managed property WorkEmail.  <br/></td>
+<td style="text-align: left;"><strong>{User.Email}</strong>  <br/></td>
+<td style="text-align: left;">Email address of the user who issued the query. For example, this value can be used to query content of the managed property WorkEmail.  <br/></td>
 </tr>
 <tr>
-<td align="left"><strong>{User.PreferredContentLanguage}</strong>  <br/></td>
-<td align="left">Language as specified as Preferred Content Language in the profile of the user who issued the query.  <br/></td>
+<td style="text-align: left;"><strong>{User.PreferredContentLanguage}</strong>  <br/></td>
+<td style="text-align: left;">Language as specified as Preferred Content Language in the profile of the user who issued the query.  <br/></td>
 </tr>
 <tr>
-<td align="left"><strong>{User.PreferredDisplayLanguage}</strong>  <br/></td>
-<td align="left">Language as specified as Preferred Display Language in the profile of the user who issued the query.  <br/></td>
+<td style="text-align: left;"><strong>{User.PreferredDisplayLanguage}</strong>  <br/></td>
+<td style="text-align: left;">Language as specified as Preferred Display Language in the profile of the user who issued the query.  <br/></td>
 </tr>
 <tr>
-<td align="left"><strong>{User.&lt;property&gt;}</strong>  <br/></td>
-<td align="left">Any property from the user profile of the user who issued the query — for example, SPS-Interests, including custom properties.  <br/></td>
+<td style="text-align: left;"><strong>{User.&lt;property&gt;}</strong>  <br/></td>
+<td style="text-align: left;">Any property from the user profile of the user who issued the query — for example, SPS-Interests, including custom properties.  <br/></td>
 </tr>
 </tbody>
 </table>
@@ -1253,26 +1289,26 @@
 <table>
 <thead>
 <tr>
-<th align="left"><strong>Query variable</strong></th>
-<th align="left"><strong>Definition</strong></th>
+<th style="text-align: left;"><strong>Query variable</strong></th>
+<th style="text-align: left;"><strong>Definition</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left"><strong>{Today+/- &lt;integer value for number of days&gt;}</strong>  <br/></td>
-<td align="left">A date calculated by adding/subtracting the specified number of days to/from the date when the query is issued. Date format is YYYY-MM-DD. For example, this value can be used to query content of the managed property LastModifiedTime.  <br/></td>
+<td style="text-align: left;"><strong>{Today+/- &lt;integer value for number of days&gt;}</strong>  <br/></td>
+<td style="text-align: left;">A date calculated by adding/subtracting the specified number of days to/from the date when the query is issued. Date format is YYYY-MM-DD. For example, this value can be used to query content of the managed property LastModifiedTime.  <br/></td>
 </tr>
 <tr>
-<td align="left"><strong>{SearchBoxQuery}</strong> or <strong>{searchTerms}</strong> <br/></td>
-<td align="left">The query value entered into a search box on a page.  <br/></td>
+<td style="text-align: left;"><strong>{SearchBoxQuery}</strong> or <strong>{searchTerms}</strong> <br/></td>
+<td style="text-align: left;">The query value entered into a search box on a page.  <br/></td>
 </tr>
 <tr>
-<td align="left"><strong>{CurrentDisplayLanguage}</strong>  <br/></td>
-<td align="left">The current display language based on MUI in ll-cc format.  <br/></td>
+<td style="text-align: left;"><strong>{CurrentDisplayLanguage}</strong>  <br/></td>
+<td style="text-align: left;">The current display language based on MUI in ll-cc format.  <br/></td>
 </tr>
 <tr>
-<td align="left"><strong>{CurrentDisplayLCID}</strong>  <br/></td>
-<td align="left">Numeric value of the current display language based on MUI in ll-cc format.  <br/></td>
+<td style="text-align: left;"><strong>{CurrentDisplayLCID}</strong>  <br/></td>
+<td style="text-align: left;">Numeric value of the current display language based on MUI in ll-cc format.  <br/></td>
 </tr>
 </tbody>
 </table>
@@ -1281,42 +1317,42 @@
 <table>
 <thead>
 <tr>
-<th align="left"><strong>Query variable</strong></th>
-<th align="left"><strong>Definition</strong></th>
+<th style="text-align: left;"><strong>Query variable</strong></th>
+<th style="text-align: left;"><strong>Definition</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left"><strong>{Page.&lt;FieldName&gt;}</strong> <br/></td>
-<td align="left">The value of a field on the page from where the query was issued. For example, if the page from where the query was issued contained a site column named "ContentOwner," specifying {Page.ContentOwner} would allow you to query for the value of "ContentOwner." FieldName is the internal name of the field. When used with taxonomy columns, use <code>{Page.&lt;FieldName&gt;.Label}</code> or <code>{Page.&lt;FieldName&gt;.TermID}</code> <br/></td>
+<td style="text-align: left;"><strong>{Page.&lt;FieldName&gt;}</strong> <br/></td>
+<td style="text-align: left;">The value of a field on the page from where the query was issued. For example, if the page from where the query was issued contained a site column named "ContentOwner," specifying {Page.ContentOwner} would allow you to query for the value of "ContentOwner." FieldName is the internal name of the field. When used with taxonomy columns, use <code>{Page.&lt;FieldName&gt;.Label}</code> or <code>{Page.&lt;FieldName&gt;.TermID}</code> <br/></td>
 </tr>
 <tr>
-<td align="left"><strong>{CurrentYear}</strong>  <br/></td>
-<td align="left">Todays's date four digits, 2018 <br/></td>
+<td style="text-align: left;"><strong>{CurrentYear}</strong>  <br/></td>
+<td style="text-align: left;">Todays's date four digits, 2018 <br/></td>
 </tr>
 <tr>
-<td align="left"><strong>{CurrentMonth}</strong>  <br/></td>
-<td align="left">Today's month, 1-12 <br/></td>
+<td style="text-align: left;"><strong>{CurrentMonth}</strong>  <br/></td>
+<td style="text-align: left;">Today's month, 1-12 <br/></td>
 </tr>
 <tr>
-<td align="left"><strong>{CurrentDate}</strong>  <br/></td>
-<td align="left">Today's date, 1-31 <br/></td>
+<td style="text-align: left;"><strong>{CurrentDate}</strong>  <br/></td>
+<td style="text-align: left;">Today's date, 1-31 <br/></td>
 </tr>
 <tr>
-<td align="left"><strong>{QueryString.&lt;ParameterName&gt;}</strong> <br/></td>
-<td QueryString.ItemNumber="QueryString.ItemNumber" align="left">A value from a query string in the URL of the current page. For example, if the URL of the current page contains a query string such as ItemNumber=567, you could obtain the value 567 by specifying </td>
+<td style="text-align: left;"><strong>{QueryString.&lt;ParameterName&gt;}</strong> <br/></td>
+<td style="text-align: left;">A value from a query string in the URL of the current page. For example, if the URL of the current page contains a query string such as ItemNumber=567, you could obtain the value 567 by specifying {QueryString.ItemNumber}. <br/></td>
 </tr>
 <tr>
-<td align="left"><strong>{QueryString.&lt;ParameterName&gt;}</strong> <br/></td>
-<td QueryString.ItemNumber="QueryString.ItemNumber" align="left">A value from a query string in the URL of the current page. For example, if the URL of the current page contains a query string such as ItemNumber=567, you could obtain the value 567 by specifying </td>
+<td style="text-align: left;"><strong>{QueryString.&lt;ParameterName&gt;}</strong> <br/></td>
+<td style="text-align: left;">A value from a query string in the URL of the current page. For example, if the URL of the current page contains a query string such as ItemNumber=567, you could obtain the value 567 by specifying {QueryString.ItemNumber}. <br/></td>
 </tr>
 <tr>
-<td align="left"><strong>{PageContext.&lt;ParameterName&gt;}</strong> <br/></td>
-<td PageContext.hubSiteId="PageContext.hubSiteId" align="left">A value from the legacyPageContext object on the page. For example, if the legacyPageContext object of the current page contains a property "hubSiteId": "166aa115-7ae7-4c21-9e02-9e0c8872be28", you could obtain the value 166aa115-7ae7-4c21-9e02-9e0c8872be28 by specifying </td>
+<td style="text-align: left;"><strong>{PageContext.&lt;ParameterName&gt;}</strong> <br/></td>
+<td style="text-align: left;">A value from the legacyPageContext object on the page. For example, if the legacyPageContext object of the current page contains a property "hubSiteId": "166aa115-7ae7-4c21-9e02-9e0c8872be28", you could obtain the value 166aa115-7ae7-4c21-9e02-9e0c8872be28 by specifying {PageContext.hubSiteId}. The property name is case sensitive!<br/></td>
 </tr>
 <tr>
-<td align="left"><strong>{TenantUrl}</strong>  <br/></td>
-<td align="left">URL of the tenant (root site)<br/></td>
+<td style="text-align: left;"><strong>{TenantUrl}</strong>  <br/></td>
+<td style="text-align: left;">URL of the tenant (root site)<br/></td>
 </tr>
 </tbody>
 </table>
@@ -1324,7 +1360,6 @@
 <p>To deal with mutli valued properties (like taxonomy multi or choices), you can use the 'OR' operator syntax <code>{|&lt;property&gt;&lt;operator&gt;&lt;multi_valuesporperty&gt;}</code>. The search query will be expanded like this:</p>
 <div class="codehilite"><pre><span></span><code>((&lt;property&gt;&lt;operator&gt;&lt;value_1&gt;) OR (&lt;property&gt;&lt;operator&gt;&lt;value_2&gt;) OR (&lt;property&gt;&lt;operator&gt;&lt;value_3&gt;) ...)
 </code></pre></div>
-
 
 <p><strong>Examples:</strong></p>
 <ul>
@@ -1352,56 +1387,40 @@
 <p>URL params refinement filters take priority over default refinement filters set in the search results Web Part options. </p>
 </blockquote>
 <h5 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h5>
-<p><strong>Use free text values</strong></p>
-<div class="codehilite"><pre><span></span><code>?filters=[{&quot;n&quot;:&quot;FileType&quot;,&quot;t&quot;:[&quot;docx&quot;]}]
-</code></pre></div>
-
-
-<p><strong>FQL expressions with multiple values</strong></p>
-<div class="codehilite"><pre><span></span><code>?filters=[{&quot;n&quot;:&quot;FileType&quot;,&quot;t&quot;:[&quot;equals(&#39;docx&#39;)&quot;,&quot;equals(&#39;pptx&#39;)&quot;],&quot;o&quot;:&quot;or&quot;}]
-</code></pre></div>
-
-
+<p><strong>Use free text values</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>?filters=[{&quot;n&quot;:&quot;FileType&quot;,&quot;t&quot;:[&quot;docx&quot;]}]
+</code></pre></div></p>
+<p><strong>FQL expressions with multiple values</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>?filters=[{&quot;n&quot;:&quot;FileType&quot;,&quot;t&quot;:[&quot;equals(&#39;docx&#39;)&quot;,&quot;equals(&#39;pptx&#39;)&quot;],&quot;o&quot;:&quot;or&quot;}]
+</code></pre></div></p>
 <blockquote>
 <p>If the targeted refiner template doesn't support multi values, only the first matching value will be selected by default.</p>
 </blockquote>
-<p><strong>Date intervals</strong></p>
-<div class="codehilite"><pre><span></span><code>?filters=[{&quot;n&quot;:&quot;Created&quot;,&quot;t&quot;:[&quot;yearAgo&quot;]}]
-</code></pre></div>
-
-
+<p><strong>Date intervals</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>?filters=[{&quot;n&quot;:&quot;Created&quot;,&quot;t&quot;:[&quot;yearAgo&quot;]}]
+</code></pre></div></p>
 <p>Valid values are <code>yesterday</code>, <code>weekAgo</code>, <code>monthAgo</code>, <code>threeMonthsAgo</code>, <code>yearAgo</code>, <code>olderThanYear</code>.</p>
-<p><strong>Date range</strong></p>
-<div class="codehilite"><pre><span></span><code>?filters=[{&quot;n&quot;:&quot;Created&quot;,&quot;t&quot;:[&quot;range(2019-09-01T04:00:00.000Z,max)&quot;],&quot;o&quot;:&quot;or&quot;}]
-</code></pre></div>
-
-
-<p><strong>Taxonomy values</strong></p>
-<div class="codehilite"><pre><span></span><code>?filters=[{&quot;n&quot;:&quot;owstaxidmetadataalltagsinfo&quot;,&quot;t&quot;:[&quot;IT&quot;,&quot;string(&#39;Governance&#39;)&quot;],&quot;o&quot;:&quot;or&quot;}] // Only the &#39;Governance&#39; results will show up since &#39;IT&#39; is tokenized to HEX
-
-?filters=[{&quot;n&quot;:&quot;owstaxidmetadataalltagsinfo&quot;,&quot;t&quot;:[&quot;string(&#39;IT&#39;)&quot;,&quot;string(&#39;Governance&#39;)&quot;],&quot;o&quot;:&quot;or&quot;}] // &#39;IT&#39; and &#39;Governance&#39; results will show up
-</code></pre></div>
-
-
-<p><strong>Persona</strong></p>
-<div class="codehilite"><pre><span></span><code>?filters=[{&quot;n&quot;:&quot;RefinableString05&quot;,&quot;t&quot;:[&quot;string(&#39;Franck&#39;)&quot;],&quot;o&quot;:&quot;or&quot;}]
-</code></pre></div>
-
-
-<p><strong>Filter containing substring value</strong></p>
-<div class="codehilite"><pre><span></span><code>?filters=[{&quot;n&quot;:&quot;FileType&quot;,&quot;t&quot;:[&quot;ppt*&quot;]}]
-
-OR 
-
-?filters=[{&quot;n&quot;:&quot;FileType&quot;,&quot;t&quot;:[&quot;string(&#39;ppt*&#39;)&quot;]}]
-</code></pre></div>
-
-
-<p><strong>Use multiple refiner properties</strong></p>
-<div class="codehilite"><pre><span></span><code>?filters=[{&quot;n&quot;:&quot;Created&quot;,&quot;t&quot;:[&quot;yearAgo&quot;],&quot;o&quot;:&quot;or&quot;},{&quot;n&quot;:&quot;FileType&quot;,&quot;t&quot;:[&quot;equals(&#39;docx&#39;)&quot;,&quot;equals(&#39;pptx&#39;)&quot;],&quot;o&quot;:&quot;or&quot;}]
-</code></pre></div>
-
-
+<p><strong>Date range</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>?filters=[{&quot;n&quot;:&quot;Created&quot;,&quot;t&quot;:[&quot;range(2019-09-01T04:00:00.000Z,max)&quot;],&quot;o&quot;:&quot;or&quot;}]
+</code></pre></div></p>
+<p><strong>Taxonomy values</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>?filters=[{&quot;n&quot;:&quot;owstaxidmetadataalltagsinfo&quot;,&quot;t&quot;:[&quot;IT&quot;,&quot;string(&#39;Governance&#39;)&quot;],&quot;o&quot;:&quot;or&quot;}] // Only the &#39;Governance&#39; results will show up since &#39;IT&#39; is tokenized to HEX
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>?filters=[{&quot;n&quot;:&quot;owstaxidmetadataalltagsinfo&quot;,&quot;t&quot;:[&quot;string(&#39;IT&#39;)&quot;,&quot;string(&#39;Governance&#39;)&quot;],&quot;o&quot;:&quot;or&quot;}] // &#39;IT&#39; and &#39;Governance&#39; results will show up
+</code></pre></div></p>
+<p><strong>Persona</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>?filters=[{&quot;n&quot;:&quot;RefinableString05&quot;,&quot;t&quot;:[&quot;string(&#39;Franck&#39;)&quot;],&quot;o&quot;:&quot;or&quot;}]
+</code></pre></div></p>
+<p><strong>Filter containing substring value</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>?filters=[{&quot;n&quot;:&quot;FileType&quot;,&quot;t&quot;:[&quot;ppt*&quot;]}]
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>OR 
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>?filters=[{&quot;n&quot;:&quot;FileType&quot;,&quot;t&quot;:[&quot;string(&#39;ppt*&#39;)&quot;]}]
+</code></pre></div></p>
+<p><strong>Use multiple refiner properties</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>?filters=[{&quot;n&quot;:&quot;Created&quot;,&quot;t&quot;:[&quot;yearAgo&quot;],&quot;o&quot;:&quot;or&quot;},{&quot;n&quot;:&quot;FileType&quot;,&quot;t&quot;:[&quot;equals(&#39;docx&#39;)&quot;,&quot;equals(&#39;pptx&#39;)&quot;],&quot;o&quot;:&quot;or&quot;}]
+</code></pre></div></p>
 <h5 id="how-default-selected-values-are-set-in-the-search-filters-wp">How default selected values are set in the search filters WP?<a class="headerlink" href="#how-default-selected-values-are-set-in-the-search-filters-wp" title="Permanent link">&para;</a></h5>
 <p>If a search filters Web Part is connected to a search results WP, the refinement values will be automatically selected at page load according to this mechanism:</p>
 <p><img alt="Default Selected Filters" src="../../images/default_selected_filters.png" /></p>
@@ -1466,7 +1485,7 @@ OR
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "instant"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.709b4209.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "instant"], "search": "../../../assets/javascripts/workers/search.709b4209.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": null}</script>
     
     
       <script src="../../../assets/javascripts/bundle.febc23d1.min.js"></script>
