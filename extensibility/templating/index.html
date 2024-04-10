@@ -707,8 +707,6 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       
-        
-      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           Templating
@@ -724,14 +722,46 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#customize-layout-templates" class="md-nav__link">
+    Customize layout templates
+  </a>
+  
+    <nav class="md-nav" aria-label="Customize layout templates">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#handlebars" class="md-nav__link">
+    Handlebars
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adaptive-cards" class="md-nav__link">
+    Adaptive cards
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#both-techniques" class="md-nav__link">
+    Both techniques
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#handlebars-html-and-css-customizations" class="md-nav__link">
@@ -752,6 +782,40 @@
   <a href="#handlebars-helpers" class="md-nav__link">
     Handlebars helpers
   </a>
+  
+    <nav class="md-nav" aria-label="Handlebars helpers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#getcountmessage" class="md-nav__link">
+    getCountMessage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getgraphpreviewurl" class="md-nav__link">
+    getGraphPreviewUrl
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getsummary" class="md-nav__link">
+    getSummary
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gettagname" class="md-nav__link">
+    getTagName
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -977,14 +1041,46 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#customize-layout-templates" class="md-nav__link">
+    Customize layout templates
+  </a>
+  
+    <nav class="md-nav" aria-label="Customize layout templates">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#handlebars" class="md-nav__link">
+    Handlebars
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adaptive-cards" class="md-nav__link">
+    Adaptive cards
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#both-techniques" class="md-nav__link">
+    Both techniques
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#handlebars-html-and-css-customizations" class="md-nav__link">
@@ -1005,6 +1101,40 @@
   <a href="#handlebars-helpers" class="md-nav__link">
     Handlebars helpers
   </a>
+  
+    <nav class="md-nav" aria-label="Handlebars helpers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#getcountmessage" class="md-nav__link">
+    getCountMessage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getgraphpreviewurl" class="md-nav__link">
+    getGraphPreviewUrl
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getsummary" class="md-nav__link">
+    getSummary
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gettagname" class="md-nav__link">
+    getTagName
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -1133,24 +1263,24 @@
                   </a>
                 
                 
-                <h1 id="customize-layout-templates">Customize layout templates<a class="headerlink" href="#customize-layout-templates" title="Permanent link">&para;</a></h1>
+                  <h1>Templating</h1>
+                
+                <h2 id="customize-layout-templates">Customize layout templates<a class="headerlink" href="#customize-layout-templates" title="Permanent link">&para;</a></h2>
 <p>In a basic customization scenario, super users and webmasters can customize existing templates or start from a blank template to adapt the UI to their requirements. Templates can use either <a href="https://handlebarsjs.com/">Handlebars</a> or <a href="https://adaptivecards.io/">Adaptive cards</a> templates to display data retrieved from the data source. Depdending of the template type, there are several options to customize a template:</p>
+<h3 id="handlebars">Handlebars<a class="headerlink" href="#handlebars" title="Permanent link">&para;</a></h3>
 <ul>
-<li><strong>Handlebars</strong><ul>
 <li>Use regular HTML markup, Handlebars syntax and <a href="#handlebars-helpers">helpers</a>.</li>
 <li><a href="#custom-css-styles">Write custom CSS styles</a>.</li>
 </ul>
-</li>
-<li><strong>Adaptive cards</strong><ul>
+<h3 id="adaptive-cards">Adaptive cards<a class="headerlink" href="#adaptive-cards" title="Permanent link">&para;</a></h3>
+<ul>
 <li>Use declarative <a href="#adaptive-cards-customizations">Adaptive Cards</a> JSON templates with data.</li>
 </ul>
-</li>
-<li><strong>Both techniques</strong><ul>
+<h3 id="both-techniques">Both techniques<a class="headerlink" href="#both-techniques" title="Permanent link">&para;</a></h3>
+<ul>
 <li>Use data sources <a href="../../usage/search-results/slots/">slots</a> </li>
 <li>Use default <a href="#using-builtin-web-components">web components</a> provided by the solution.</li>
 <li>Use <a href="#microsoft-graph-toolkit">Microsoft Graph Toolkit components</a>.</li>
-</ul>
-</li>
 </ul>
 <h2 id="handlebars-html-and-css-customizations">Handlebars, HTML and CSS customizations<a class="headerlink" href="#handlebars-html-and-css-customizations" title="Permanent link">&para;</a></h2>
 <p><img alt="&quot;Handlebars&quot;" class="center" src="../../assets/extensibility/handlebars_templating.png" /></p>
@@ -1159,7 +1289,7 @@
 </blockquote>
 <h3 id="template-structure">Template structure<a class="headerlink" href="#template-structure" title="Permanent link">&para;</a></h3>
 <p>A layout template is always split into two distinct parts:</p>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>    <span class="p">&lt;</span><span class="nt">content</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;template&quot;</span><span class="p">&gt;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>    <span class="p">&lt;</span><span class="nt">content</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;template&quot;</span><span class="p">&gt;</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>        <span class="cm">&lt;!-- Your template content here --&gt;</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="p">&lt;/</span><span class="nt">content</span><span class="p">&gt;</span>
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
@@ -1167,9 +1297,13 @@
 <a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>        <span class="cm">&lt;!-- Your placeholder content here --&gt;</span>
 <a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    <span class="p">&lt;/</span><span class="nt">content</span><span class="p">&gt;</span>
 </code></pre></div>
-- A <code>template</code> part, containing the HTML markup to display your data <strong>once fetched</strong>. This part is mandatory to display your data.</p>
 <ul>
-<li>A <code>placeholder</code> part, containing the HTML markup to display as placeholder <strong>while the data are getting fetched</strong>. This part is optional.</li>
+<li>
+<p>A <code>template</code> part, containing the HTML markup to display your data <strong>once fetched</strong>. This part is mandatory to display your data.</p>
+</li>
+<li>
+<p>A <code>placeholder</code> part, containing the HTML markup to display as placeholder <strong>while the data are getting fetched</strong>. This part is optional.</p>
+</li>
 </ul>
 <p>Both can use Handlebars and web components (Microsoft Graph Toolkit included).</p>
 <h3 id="handlebars-helpers">Handlebars helpers<a class="headerlink" href="#handlebars-helpers" title="Permanent link">&para;</a></h3>
@@ -1177,6 +1311,25 @@
 <blockquote>
 <p>The <code>markdown</code> and <code>logging</code> helpers are not available. For <code>times</code> use <code>multiply</code> as <code>times</code> is a custom iterator.</p>
 </blockquote>
+<h4 id="getcountmessage">getCountMessage<a class="headerlink" href="#getcountmessage" title="Permanent link">&para;</a></h4>
+<p><strong>Syntax</strong> <code>{{getCountMessage &lt;total items count&gt; &lt;keywords&gt;}}</code></p>
+<p><strong>Description</strong> Display a friendly message displaying the result and the entered keywords.</p>
+<p><strong>Example</strong> <code>{{getCountMessage 5 'contoso'}}</code> will display <em>'5 results for 'contoso'</em>.</p>
+<h4 id="getgraphpreviewurl">getGraphPreviewUrl<a class="headerlink" href="#getgraphpreviewurl" title="Permanent link">&para;</a></h4>
+<p><strong>Syntax</strong> <code>{{getGraphPreviewUrl "&lt;absolute_URL&gt;"}}</code></p>
+<p><strong>Description</strong> Try to determine the preview URL based on an absolute URL using the unified Microsoft Graph URL syntax. For instance, <em>https://contoso.sharepoint.com/sites/dev/Shared%20Documents/MyDocument.pdf</em> becomes <em>https://contoso.sharepoint.com/sites/dev/Shared%20Documents/?id=/sites/dev/Shared%20Documents/MyDocument.pdf&amp;parent=/sites/dev/Shared%20Documents</em></p>
+<p><strong>Example</strong> <code>{{getGraphPreviewUrl 'https://contoso.sharepoint.com/sites/dev/Shared%20Documents/MyDocument.pdf'}}</code></p>
+<h4 id="getsummary">getSummary<a class="headerlink" href="#getsummary" title="Permanent link">&para;</a></h4>
+<p><strong>Syntax</strong> <code>{{getSummary "&lt;value&gt;"}}</code></p>
+<p><strong>Description</strong> <em>Use with SharePoint Search data source and the HitHighlightedSummary SharePoint search managed property</em>. Returns the formatted value for rendering.</p>
+<p><strong>Example</strong> <code>{{getSummary "HitHighlightedSummary"}}</code></p>
+<h4 id="gettagname">getTagName<a class="headerlink" href="#gettagname" title="Permanent link">&para;</a></h4>
+<p><strong>Syntax</strong> <code>{{getTagName "&lt;value&gt;"}}</code></p>
+<p><strong>Description</strong> <em>Use with tag fields</em>. Returns the name of the tag, omitting the ID in the tag string (<code>L0\|#000000000-0000-0000-0000-000000000000\|…</code>).</p>
+<p><strong>Example</strong> <code>{{getTagName "Tag"}}</code></p>
+<p><strong>Syntax</strong> </p>
+<p><strong>Description</strong> </p>
+<p><strong>Example</strong> </p>
 <table>
 <thead>
 <tr>
@@ -1186,26 +1339,6 @@
 </tr>
 </thead>
 <tbody>
-<tr>
-<td><code>{{getGraphPreviewUrl "&lt;absolute_URL&gt;"</code></td>
-<td>Try to determine the preview URL based on an absolute URL using the unified Microsoft Graph URL syntax. For instance, <em>https://contoso.sharepoint.com/sites/dev/Shared%20Documents/MyDocument.pdf</em> becomes <em>https://contoso.sharepoint.com/sites/dev/Shared%20Documents/?id=/sites/dev/Shared%20Documents/MyDocument.pdf&amp;parent=/sites/dev/Shared%20Documents</em></td>
-<td><code>{{getGraphPreviewUrl 'https://contoso.sharepoint.com/sites/dev/Shared%20Documents/MyDocument.pdf'}}</code></td>
-</tr>
-<tr>
-<td><code>{{getCountMessage &lt;total items count&gt; &lt;keywords&gt;}}</code></td>
-<td>Display a friendly message displaying the result and the entered keywords.</td>
-<td><code>{{getCountMessage 5 'contoso'}}</code> will display <em>'5 results for 'contoso'</em>.</td>
-</tr>
-<tr>
-<td><code>{{getSummary "&lt;value&gt;"}}</code></td>
-<td><em>Use with SharePoint Search data source and the HitHighlightedSummary SharePoint search managed property</em>. Returns the formatted value for rendering.</td>
-<td><code>{{getSummary HitHighlightedSummary}}</code></td>
-</tr>
-<tr>
-<td><code>{{getTagName "&lt;value&gt;"}}</code></td>
-<td><em>Use with tag fields</em>. Returns the name of the tag, omitting the ID in the tag string (<code>L0\|#000000000-0000-0000-0000-000000000000\|…</code>).</td>
-<td><code>{{getTagName Tag}}</code></td>
-</tr>
 <tr>
 <td><code>{{getDate &lt;data_value&gt; "&lt;format&gt;" "&lt;time handling&gt;"}}</code></td>
 <td>Format the date with <a href="https://momentjs.com/docs/#/parsing/string-format/">Moment.js</a> according to the current language. Date in the managed property should be on the form <code>2018-09-10T06:29:25.0000000Z</code> for the function to work.<p>&lt;time handling&gt; is optional and takes <ul><li>0 = format to browsers time zone (default)</li><li>1 = ignore Z time and handle as browsers local time zone</li><li>2 = strip time and set to 00:00:00 in browsers local time zone</li><li>3 = display in the time zone for the current web</li><li>4 = display in the time zone from the uers profile</li></td>
