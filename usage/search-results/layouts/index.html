@@ -261,22 +261,6 @@
   
 
       
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../../../v3/" class="md-tabs__link">
-        Version 3
-      </a>
-    </li>
-  
-
-      
     </ul>
   </div>
 </nav>
@@ -375,6 +359,18 @@
     <li class="md-nav__item">
       <a href="../../../scenarios/" class="md-nav__link">
         Scenario tutorials
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../create-custom-layouts/" class="md-nav__link">
+        Create custom layouts
       </a>
     </li>
   
@@ -939,48 +935,6 @@
   
 
     
-      
-      
-      
-
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
-      
-      <label class="md-nav__link" for="__nav_7">
-        Version 3
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-      <nav class="md-nav" aria-label="Version 3" data-md-level="1">
-        <label class="md-nav__title" for="__nav_7">
-          <span class="md-nav__icon md-icon"></span>
-          Version 3
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../v3/" class="md-nav__link">
-        Documentation
-      </a>
-    </li>
-  
-
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
   </ul>
 </nav>
                   </div>
@@ -1203,6 +1157,16 @@
 <td>Display the details list in compact mode.</td>
 <td></td>
 </tr>
+<tr>
+<td><strong>Enable grouping</strong></td>
+<td>Display a grouped list, grouped by the specified column.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Enable sticky header</strong></td>
+<td>Display the details list with a sticky header that will stay in place when scrolling. Specify the desired height for the view (in pixels) and then specify the desired items per page in <em>Number of items per page</em> under <em>Paging options</em> and all items on the page will be scrollable within the view.</td>
+<td></td>
+</tr>
 </tbody>
 </table>
 <h3 id="slider">Slider<a class="headerlink" href="#slider" title="Permanent link">&para;</a></h3>
@@ -1312,6 +1276,11 @@
 <td></td>
 </tr>
 <tr>
+<td><strong>Show presence</strong></td>
+<td><p>If enabled, the person's presence-information will be displayed in the bottom right corner of the user's profile picture.</p>This feature uses Microsoft Graph and needs the API permission 'Presence.Read.All' in your tenant to work.</td>
+<td></td>
+</tr>
+<tr>
 <td><strong>Component size</strong></td>
 <td>The size of the person item (not only the picture). The more the size is and the more information will be displayed for each item and vice versa.</td>
 <td></td>
@@ -1367,7 +1336,7 @@ More information <a href="https://docs.microsoft.com/en-us/graph/toolkit/compone
 </code></pre></div>
 <h3 id="custom">Custom<a class="headerlink" href="#custom" title="Permanent link">&para;</a></h3>
 <p>The 'Custom' layout is a minimal layout to start with if you want to create your own customized UI from scratch.</p>
-<p>You can also start from an existing layout by first selecting it, and then click <code>{}</code> next to the <em>Edit results tempalte</em> field. This will copy the selected template and allow you to make modifications as needed.</p>
+<p>You can also start from an existing layout by first selecting it, and then click <code>{}</code> next to the <em>Edit results template</em> field. This will copy the selected template and allow you to make modifications as needed.</p>
 <p><img alt="&quot;Custom layout&quot;" class="center" src="../../../assets/webparts/search-results/layouts/custom_layout.png" /> </p>
 <blockquote>
 <p>Updating a builtin layout (ex: 'Cards', 'Detail List', etc.) will automatically switch the selected layout to 'Custom' with your modifications as content. <strong>All previous custom layout content will be overwritten</strong>.</p>
